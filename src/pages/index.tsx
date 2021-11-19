@@ -1,3 +1,4 @@
+import Navbar from '@/components/Navbar'
 import Head from 'next/head'
 import { Container } from '../styles/Home'
 
@@ -7,6 +8,7 @@ export default function Home() {
       <Head>
         <title>Template Next Tipescript</title>
       </Head>
+      <Navbar/>
       <section>
         <h1>Template using typescript and Sass</h1>
       </section>
