@@ -50,7 +50,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="shortcut icon" href="/favicon.png" type="image/png" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" type="image/x-icon" href="/favicon.png" />
           <meta name="theme-color" content="#673AB6" />
         </Head>
         <body>
