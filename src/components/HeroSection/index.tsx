@@ -9,7 +9,7 @@ interface HeroSectionProps {
 
 function HeroSection({ children }: HeroSectionProps) {
   return (
-    <HeroContainer>
+    <HeroContainer id="home">
       <HeroBg>
         <VideoBg
           autoPlay
