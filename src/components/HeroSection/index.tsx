@@ -4,7 +4,7 @@ import { HeroBg, HeroContainer, VideoBg } from './styles'
 import Video from '@/assets/hero_video.mp4'
 
 interface HeroSectionProps {
-  children: ReactNode
+  children?: ReactNode
 }
 
 function HeroSection({ children }: HeroSectionProps) {
