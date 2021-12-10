@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ReactNode, useCallback, useState } from 'react'
 import Link from 'next/link'
 
 import { ArrowForward, ArrowRight, HeroBg, HeroBtn, HeroBtnWrapper, HeroContainer, HeroContent, HeroH1, HeroP, VideoBg } from './styles'
@@ -9,6 +9,12 @@ interface HeroSectionProps {
 }
 
 function HeroSection({ children }: HeroSectionProps) {
+  const [hover, setHover] = useState(false)
+
+  const onHover = useCallback(() => {
+    setHover(!hover)
+  },[hover])
+
   return (
     <HeroContainer id="home">
       <HeroBg>
@@ -27,7 +33,7 @@ function HeroSection({ children }: HeroSectionProps) {
         </HeroP>
         <HeroBtnWrapper>
           <Link prefetch href='/signup' passHref >
-            <HeroBtn>
+            <HeroBtn onMouseEnter={onHover} onMouseLeave={onHover} >
               De volta ao negócios {hover ? <ArrowForward/> : <ArrowRight/>}
             </HeroBtn>
           </Link>
