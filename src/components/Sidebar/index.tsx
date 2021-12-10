@@ -5,13 +5,17 @@ import { CloseIcon, Icon, SidebarBtnLink, SidebarBtnWrapper, SidebarContainer, S
 
 interface SidebarProps {
   children?: ReactNode
-  isOpen?: boolean
+  isOpen: boolean
+  toggle: () => void
 }
 
-export const Sidebar:React.FC<SidebarProps> = ({ children, isOpen = false }) => {
+export const Sidebar:React.FC<SidebarProps> = ({ children, isOpen = false, toggle }) => {
+
+  //SidebarLink use "onClick={toggle}" or a new handle function to triger toggling and enshure we can activate a new route
+  //For de second behavior we shoulde the handle route function into SidebarItem component
   return (
-    <SidebarContainer isOpen={isOpen} >
-      <Icon>
+    <SidebarContainer isOpen={isOpen} onClick={toggle} >
+      <Icon onClick={toggle} >
         <CloseIcon />
       </Icon>
       <SidebarWrapper>
