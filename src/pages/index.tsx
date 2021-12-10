@@ -4,6 +4,7 @@ import { Sidebar } from '@/components/Sidebar'
 import Head from 'next/head'
 import { Container } from '../styles/Home'
 import HeroSection from '@/components/HeroSection'
+import { InfoSection } from '@/components/InfoSection'
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,9 +21,7 @@ export default function Home() {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeroSection />
-      <section>
-        <h1>Template using typescript and Sass</h1>
-      </section>
+      <InfoSection id="Info" />
     </Container>
   )
 }
