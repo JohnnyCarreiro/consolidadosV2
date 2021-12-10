@@ -6,9 +6,10 @@ import { Nav, NavContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLink, NavB
 
 interface NavbarProps {
   children?: ReactNode
+  toggle: () => void
 }
 
-function Navbar({ children }: NavbarProps) {
+function Navbar({ children, toggle }: NavbarProps) {
   return (
     <>
       <Nav>
@@ -16,7 +17,7 @@ function Navbar({ children }: NavbarProps) {
           <Link prefetch href='/' passHref >
             <NavLogo>ConsoliDados</NavLogo>
           </Link>
-          <MobileIcon>
+          <MobileIcon onClick={toggle} >
             <FaBars />
           </MobileIcon>
           <NavMenu>
