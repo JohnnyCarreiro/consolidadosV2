@@ -31,6 +31,7 @@ export const GlobalStyle = createGlobalStyle<Props>`
     @media (max-width: 720px){
       font-size:87.5%;
     }
+    font-family: 'Encode Sans Expanded', sans-serif;
   }
 
   body{
@@ -39,7 +40,7 @@ export const GlobalStyle = createGlobalStyle<Props>`
   }
 
   body, input, textarea, select, button{
-    font: 400 1rem 'Roboto', sans-serif;
+    font: 400 1rem 'Encode Sans Expanded', sans-serif;
   }
 
   button{
@@ -49,6 +50,7 @@ export const GlobalStyle = createGlobalStyle<Props>`
   a{
     color:inherit;
     text-decoration: none;
+    font: 400 1rem 'Encode Sans Expanded', sans-serif;
   }
 
 `

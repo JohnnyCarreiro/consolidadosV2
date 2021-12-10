@@ -52,6 +52,9 @@ export default class MyDocument extends Document {
           <link rel="shortcut icon" href="/favicon.png" type="image/png" />
           <link rel="icon" type="image/x-icon" href="/favicon.png" />
           <meta name="theme-color" content="#673AB6" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={'true'} />
+          <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700;900&display=swap" rel="stylesheet"/>
         </Head>
         <body>
           <Main />
