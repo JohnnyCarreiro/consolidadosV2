@@ -36,7 +36,7 @@ function Navbar({ children }: NavbarProps) {
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <Link prefetch href='/' passHref >
+            <Link prefetch href='/signin' passHref >
               <NavBtnLink>Sing In</NavBtnLink>
             </Link>
           </NavBtn>
