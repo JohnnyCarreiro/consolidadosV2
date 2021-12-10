@@ -1,7 +1,8 @@
 import { ReactNode, useCallback, useState } from 'react'
 import Link from 'next/link'
 
-import { ArrowForward, ArrowRight, HeroBg, HeroBtn, HeroBtnWrapper, HeroContainer, HeroContent, HeroH1, HeroP, VideoBg } from './styles'
+import { ArrowForward, ArrowRight, HeroBg, HeroBtnWrapper, HeroContainer, HeroContent, HeroH1, HeroP, VideoBg } from './styles'
+import { Button } from '@/components/Button/ButtonElements'
 import Video from '@/assets/hero_video.mp4'
 
 interface HeroSectionProps {
@@ -32,10 +33,10 @@ function HeroSection({ children }: HeroSectionProps) {
           Mussum Ipsum, cacilds vidis litro abertis. Per aumento de cachacis, eu reclamis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Suco de cevadiss deixa as pessoas mais interessantis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.
         </HeroP>
         <HeroBtnWrapper>
-          <Link prefetch href='/signup' passHref >
-            <HeroBtn onMouseEnter={onHover} onMouseLeave={onHover} >
+          <Link href='signup' passHref >
+            <Button onMouseEnter={onHover} onMouseLeave={onHover} >
               De volta ao negócios {hover ? <ArrowForward/> : <ArrowRight/>}
-            </HeroBtn>
+            </Button>
           </Link>
         </HeroBtnWrapper>
       </HeroContent>
