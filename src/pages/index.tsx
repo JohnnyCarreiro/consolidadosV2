@@ -20,8 +20,6 @@ export default function Home() {
       <Head>
         <title>Template Next Tipescript</title>
       </Head>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
       <HeroSection />
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />
