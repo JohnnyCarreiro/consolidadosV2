@@ -231,8 +231,18 @@ function Footer({ children }: FooterProps) {
         </FooterLinksContainer>
         <SociaMedia>
           <SocialMediaWrapper>
-            {/* Create logic to handle to redirect to home in diferent paths */}
-            <ComapnyLogo to="" >ConsoliDados</ComapnyLogo>
+            {/* Create logic to handle to redirect to home in diferent paths
+              - use a commun anchor instead;
+            */}
+            <ComapnyLogo
+              to="home"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-80}
+            >
+              ConsoliDados
+            </ComapnyLogo>
             <WebsiteRights>ConsoliDados © {new Date().getFullYear()} All Rights Reserved </WebsiteRights>
             <SocilaIcons>
               <SocialIconLink href="/#" target="_blank" area-label="Facebook" > <FaFacebook /> </SocialIconLink>
