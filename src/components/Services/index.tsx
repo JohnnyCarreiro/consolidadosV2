@@ -1,15 +1,15 @@
 import { ReactNode } from 'react'
 
 import { ServiceCard, ServicesContainer, ServiceIcon, ServicesMainHeading, ServicesWrapper, ServiceHeading, ServiceDescription } from './styles'
+import icon1 from '@/assets/images/services/svg-1.svg'
+import icon2 from '@/assets/images/services/svg-1.svg'
+import icon3 from '@/assets/images/services/svg-1.svg'
 
 interface ServicesProps {
   children?: ReactNode;
 }
 
 export const Services:React.FC<ServicesProps> = ({ children }) => {
-  const icon1 = ''
-  const icon2 = ''
-  const icon3 = ''
   return (
     <ServicesContainer id={'services'}>
       <ServicesMainHeading>Our Services</ServicesMainHeading>
