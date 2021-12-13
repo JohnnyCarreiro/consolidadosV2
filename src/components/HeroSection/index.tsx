@@ -34,7 +34,7 @@ function HeroSection({ children }: HeroSectionProps) {
         </HeroP>
         <HeroBtnWrapper>
           <Link href='signup' passHref >
-            <Button onMouseEnter={onHover} onMouseLeave={onHover} >
+            <Button to='about' onMouseEnter={onHover} onMouseLeave={onHover} >
               De volta ao negócios {hover ? <ArrowForward/> : <ArrowRight/>}
             </Button>
           </Link>

@@ -63,8 +63,9 @@ export const NavMenu = styled.ul `
     display: none;
   }
 `
-export const NavItems = styled.li `
-  display: flex;
+export const NavItem = styled.li `
+  display: inline-flex;
+  text-align: center;
   height: 80px;
 `
 export const NavLink = styled(LinkS) `
@@ -73,7 +74,7 @@ export const NavLink = styled(LinkS) `
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
-  height: 100%;
+  /* height: 100%; */
   cursor: pointer;
 
   &.active {
