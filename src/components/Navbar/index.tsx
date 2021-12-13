@@ -1,7 +1,9 @@
-import { ReactNode } from 'react'
+import { ReactNode, useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
+import { animateScroll as scroll } from 'react-scroll'
 
 import { FaBars } from 'react-icons/fa'
+import { IconContext } from 'react-icons/lib'
 import { navLinks } from './links'
 import { NavLink } from './NavLink'
 import { Nav, NavContainer, NavLogo, MobileIcon, NavMenu, NavBtn, NavBtnLink } from './styles'
@@ -12,12 +14,29 @@ interface NavbarProps {
 }
 
 function Navbar({ children, toggle }: NavbarProps) {
+  const [scrollNav, setScrollNav] = useState(false)
+
+  const changeNavBG = useCallback(() => {
+    if(window.scrollY >= 80) {
+      setScrollNav(true)
+    } else {
+      setScrollNav(false)
+    }
+  },[])
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeNavBG)
+  },[])
+
+  const toggleHome = useCallback(() => {
+    scroll.scrollToTop()
+  },[])
   return (
-    <>
-      <Nav>
+    <IconContext.Provider value={{color: '#fff'}}>
+      <Nav scrollNav={scrollNav} >
         <NavContainer>
           <Link href='/' passHref >
-            <NavLogo>ConsoliDados</NavLogo>
+            <NavLogo onClick={toggleHome} >ConsoliDados</NavLogo>
           </Link>
           <MobileIcon onClick={toggle} >
             <FaBars />
@@ -36,7 +55,7 @@ function Navbar({ children, toggle }: NavbarProps) {
           </NavBtn>
         </NavContainer>
       </Nav>
-    </>
+    </IconContext.Provider>
   )
 }
 
