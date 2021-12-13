@@ -5,6 +5,7 @@ import Head from 'next/head'
 import { Container } from '../styles/Home'
 import HeroSection from '@/components/HeroSection'
 import { InfoSection } from '@/components/InfoSection'
+import { homeObjOne, homeObjTwo, homeObjThree } from '@/components/InfoSection/Data'
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
@@ -21,7 +22,9 @@ export default function Home() {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeroSection />
-      <InfoSection id="Info" />
+      <InfoSection {...homeObjOne} />
+      <InfoSection {...homeObjTwo} />
+      <InfoSection {...homeObjThree} />
     </Container>
   )
 }
