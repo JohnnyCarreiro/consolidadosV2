@@ -66,3 +66,68 @@ export const FooterLink = styled(LinkS)`
     transition: all 0.3s ease-out
   }
 `
+export const SociaMedia = styled.div`
+  max-width: 1100px;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+`
+export const SocialMediaWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  width: 100%;
+  margin: 40px auto 0 auto;
+
+  @media screen and (max-width: 820px) {
+    flex-direction: column;
+  }
+`
+export const ComapnyLogo = styled(LinkS)`
+  color: #fff;
+  justify-self: start;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-weight: 900;
+`
+export const WebsiteRights = styled.small`
+  color: #fff;
+  margin-bottom: 16px;
+`
+export const SocilaIcons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+`
+export const SocialIconLink = styled.a`
+  color: #fff;
+  font-size: 1.5rem;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    color: #01be71;
+    transition: all 0.3s ease-out;
+  }
+`
+export const WebsiteDeveloper = styled.small`
+  color: #fff;
+  width: 100%;
+  margin: 32px auto 0 auto;
+  /* text-align: center; */
+`
+export const DeveloperLink = styled.a`
+  color: #01be71;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    cursor: pointer;
+  }
+`
