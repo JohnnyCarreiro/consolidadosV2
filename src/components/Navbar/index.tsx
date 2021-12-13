@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 import { FaBars } from 'react-icons/fa'
 import Link from 'next/link'
 
-import { Nav, NavContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLink, NavBtn, NavBtnLink } from './styles'
+import { Nav, NavContainer, NavLogo, MobileIcon, NavMenu, NavItems, NavLink, NavBtn, NavBtnLink } from './styles'
 
 interface NavbarProps {
   children?: ReactNode
@@ -21,20 +21,48 @@ function Navbar({ children, toggle }: NavbarProps) {
             <FaBars />
           </MobileIcon>
           <NavMenu>
-            <NavItem>
-              <Link href='#' passHref >
-                <NavLink>About</NavLink>
-              </Link>
-              <Link href='#' passHref >
-                <NavLink>Discover</NavLink>
-              </Link>
-              <Link href='#' passHref >
-                <NavLink>Services</NavLink>
-              </Link>
-              <Link href='#' passHref >
-                <NavLink>Sign Up</NavLink>
-              </Link>
-            </NavItem>
+            <NavItems>
+              <NavLink
+                to='/about'
+                smooth={true}
+                duration={500}
+                spy={true}
+                // exact="true"
+                offset={-80}
+              >
+                About
+              </NavLink>
+              <NavLink
+                to='discover'
+                smooth={true}
+                duration={500}
+                spy={true}
+                // exact="true"
+                offset={-80}
+              >
+                Discover
+              </NavLink>
+              <NavLink
+                to='services'
+                smooth={true}
+                duration={500}
+                spy={true}
+                // exact="true"
+                offset={-80}
+              >
+                Services
+              </NavLink>
+              <NavLink
+                to='signup'
+                smooth={true}
+                duration={500}
+                spy={true}
+                // exact="true"
+                offset={-80}
+              >
+                Sign Up
+              </NavLink>
+            </NavItems>
           </NavMenu>
           <NavBtn>
             <Link prefetch href='/signin' passHref >

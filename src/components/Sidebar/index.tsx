@@ -20,15 +20,61 @@ export const Sidebar:React.FC<SidebarProps> = ({ children, isOpen = false, toggl
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarItem className={'active'}>
-            <SidebarLink>About</SidebarLink>
+          <SidebarItem onClick={toggle} >
+            <SidebarLink
+              to='about'
+              smooth={true}
+              duration={500}
+              spy={true}
+              // exact="true"
+              offset={-80}
+              onClick={() => setTimeout(() => toggle(), 350) }
+              delay={250}
+            >
+              About
+            </SidebarLink>
           </SidebarItem>
-          <SidebarItem>
-            <SidebarLink>Discover</SidebarLink>
-          </SidebarItem><SidebarItem>
-            <SidebarLink>Services</SidebarLink>
-          </SidebarItem><SidebarItem>
-            <SidebarLink>Sign Up</SidebarLink>
+          <SidebarItem onClick={toggle} >
+            <SidebarLink
+              to='discover'
+              smooth={true}
+              duration={500}
+              spy={true}
+              // exact="true"
+              offset={-80}
+              onClick={() => setTimeout(() => toggle(), 350) }
+              delay={250}
+            >
+              Discover
+            </SidebarLink>
+          </SidebarItem>
+          <SidebarItem onClick={toggle} >
+            <SidebarLink
+              to='services'
+              smooth={true}
+              duration={500}
+              spy={true}
+              // exact="true"
+              offset={-80}
+              onClick={() => setTimeout(() => toggle(), 350) }
+              delay={250}
+            >
+              Services
+            </SidebarLink>
+          </SidebarItem>
+          <SidebarItem onClick={toggle} >
+            <SidebarLink
+              to='signup'
+              smooth={true}
+              duration={500}
+              spy={true}
+              // exact="true"
+              offset={-80}
+              onClick={() => setTimeout(() => toggle(), 350) }
+              delay={250}
+            >
+              Sign Up
+            </SidebarLink>
           </SidebarItem>
         </SidebarMenu>
         <SidebarBtnWrapper>

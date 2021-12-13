@@ -9,11 +9,11 @@ export const ServicesContainer = styled.section`
   align-items: center;
   background: #010606;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     height: 1100px;
   }
 
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 480px) {
     height: 1300px;
   }
 `
@@ -23,7 +23,7 @@ export const ServicesMainHeading = styled.h2`
   font-weight: 900;
   margin-bottom: 64px;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 480px) {
     font-size: 2rem;
   }
 `

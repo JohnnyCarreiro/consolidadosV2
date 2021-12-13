@@ -63,7 +63,7 @@ export const NavMenu = styled.ul `
     display: none;
   }
 `
-export const NavItem = styled.li `
+export const NavItems = styled.li `
   display: flex;
   height: 80px;
 `
