@@ -6,6 +6,7 @@ import { Container } from '../styles/Home'
 import HeroSection from '@/components/HeroSection'
 import { InfoSection } from '@/components/InfoSection'
 import { homeObjOne, homeObjTwo, homeObjThree } from '@/components/InfoSection/Data'
+import { Services } from '@/components/Services'
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,6 +26,7 @@ export default function Home() {
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjThree} />
+      <Services />
     </Container>
   )
 }
