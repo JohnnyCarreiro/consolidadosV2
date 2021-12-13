@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import { SigninContainer } from '@/styles/signin'
+import SignInComponent from '@/components/SignIn'
 
 interface SigninProps {
   children: ReactNode;
@@ -8,8 +9,7 @@ interface SigninProps {
 export const Signin: React.FC<SigninProps> = ({ children }) => {
   return (
     <SigninContainer>
-      <h1>Signin</h1>
-      {children}
+      <SignInComponent />
     </SigninContainer>
   )
 }
