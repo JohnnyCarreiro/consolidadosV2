@@ -6,6 +6,7 @@ import theme from 'styles/theme'
 import { GlobalStyle } from 'styles/GlobalStyle'
 import Navbar from '@/components/Navbar'
 import { Sidebar } from '@/components/Sidebar'
+import Footer from '@/components/Footer'
 
 interface MyAppProps extends AppProps {}
 
@@ -22,6 +23,7 @@ export default function MyApp({Component, pageProps}:MyAppProps){
           <Sidebar isOpen={isOpen} toggle={toggle} />
           <Component { ...pageProps }/>
           <GlobalStyle />
+          <Footer />
         </ThemeProvider>
     )
 }
